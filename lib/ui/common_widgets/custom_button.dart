@@ -10,6 +10,8 @@ class CustomButton extends StatelessWidget {
   final Function onTap;
   final EdgeInsets padding;
   final bool isOutlined;
+  final double width;
+  final double height;
   const CustomButton({
     Key key,
     this.title,
@@ -20,6 +22,8 @@ class CustomButton extends StatelessWidget {
     this.onTap,
     this.padding,
     this.isOutlined = false,
+    this.height = 44,
+    this.width,
   }) : super(key: key);
 
   @override
@@ -29,8 +33,8 @@ class CustomButton extends StatelessWidget {
       child: GestureDetector(
         onTap: onTap,
         child: Container(
-          height: 44,
-          width: MediaQuery.of(context).size.width - 20,
+          height: height,
+          width: width ?? MediaQuery.of(context).size.width - 20,
           decoration: BoxDecoration(
             border: Border.all(color: color ?? ThemeUtils.darkGreen),
             borderRadius: BorderRadius.circular(borderRadius ?? 12),

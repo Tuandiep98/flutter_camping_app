@@ -18,7 +18,7 @@ class MyHomePage extends GetView<MyDrawerController> {
         borderRadius: 32.0,
         showShadow: false,
         angle: 0.0,
-        drawerShadowsBackgroundColor: ThemeUtils.darkGreen,
+        drawerShadowsBackgroundColor: Colors.grey[300],
         slideWidth: MediaQuery.of(context).size.width * 0.65,
         menuBackgroundColor: ThemeUtils.darkGreen,
       ),

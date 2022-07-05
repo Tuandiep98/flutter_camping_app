@@ -1,10 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_camping_app/ui/screens/home/home_screen.dart';
 import 'package:get/get.dart';
-import 'package:flutter_zoom_drawer/flutter_zoom_drawer.dart';
 import 'ui/global/my_router_observer.dart';
 import 'ui/global/router.dart';
-import 'ui/screens/home_drawer/home_drawer_screen.dart';
 import 'ui/utils/my_drawer_controller.dart';
 import 'ui/utils/navigation_utils.dart';
 
@@ -22,14 +19,13 @@ class MyApp extends StatelessWidget {
       navigatorKey: NavigationUtils.navigatorKey,
       onGenerateRoute: (settings) => MyRouter.generateRoute(settings),
       navigatorObservers: [MyRouteObserver()],
-      // initialRoute: MyRouter.splash,
+      initialRoute: MyRouter.splash,
       theme: ThemeData(
         primarySwatch: Colors.red,
         scaffoldBackgroundColor: Colors.white,
         visualDensity: VisualDensity.adaptivePlatformDensity,
       ),
       debugShowCheckedModeBanner: false,
-      home: MyHomePage(),
     );
   }
 }

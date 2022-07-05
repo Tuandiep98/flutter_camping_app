@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_camping_app/ui/common_widgets/custom_appbar.dart';
 import 'package:flutter_camping_app/ui/common_widgets/custom_button.dart';
+import 'package:flutter_camping_app/ui/global/router.dart';
 import 'package:flutter_camping_app/ui/utils/theme_utils.dart';
+import 'package:get/get.dart';
 
 part './widgets/your_id_element.dart';
 
@@ -40,8 +42,9 @@ class _HomeScreenState extends State<HomeScreen> {
             padding: const EdgeInsets.symmetric(
               horizontal: 30,
             ),
+            onTap: () => Get.toNamed(MyRouter.addNewTripScreen),
           ),
-          const SizedBox(height: 20),
+          const SizedBox(height: 30),
         ],
       ),
     );

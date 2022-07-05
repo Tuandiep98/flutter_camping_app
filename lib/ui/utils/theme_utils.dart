@@ -4,7 +4,7 @@ class ThemeUtils {
   static final background = Color(0xff84CC16);
   static final greenish = Color(0xffECFCCB);
   static final darkGreen = Color(0xff84CC16);
-  static final greish = Colors.grey[400];
+  static final greish = Colors.grey[300];
 
   static final descriptionTextStyle = TextStyle(
     fontSize: 14,

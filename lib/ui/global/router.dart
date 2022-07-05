@@ -1,6 +1,9 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_camping_app/ui/screens/add_new_trip/add_new_trip_screen.dart';
 import 'package:flutter_camping_app/ui/screens/home/home_screen.dart';
+import 'package:flutter_camping_app/ui/screens/home_drawer/home_drawer_screen.dart';
 import 'package:flutter_camping_app/ui/screens/intro_slider_screen.dart';
+import 'package:flutter_camping_app/ui/screens/notification/notification_screen.dart';
 import 'package:flutter_camping_app/ui/screens/signin/signin_screen.dart';
 import 'package:flutter_camping_app/ui/screens/signup/signup_screen.dart';
 import 'package:flutter_camping_app/ui/screens/splash_screen.dart';
@@ -11,6 +14,9 @@ class MyRouter {
   static const String signinScreen = '/signinScreen';
   static const String signupScreen = '/signupScreen';
   static const String homeScreen = '/homeScreen';
+  static const String myHomePage = '/myHomePage';
+  static const String notificaitonScreen = '/notificationScreen';
+  static const String addNewTripScreen = '/addNewTripScreen';
 
   static PageRouteBuilder _buildRouteNavigationWithoutEffect(
       RouteSettings settings, Widget widget) {
@@ -47,6 +53,21 @@ class MyRouter {
         return _buildRouteNavigationWithoutEffect(
           settings,
           const HomeScreen(),
+        );
+      case myHomePage:
+        return _buildRouteNavigationWithoutEffect(
+          settings,
+          MyHomePage(),
+        );
+      case notificaitonScreen:
+        return _buildRouteNavigationWithoutEffect(
+          settings,
+          const NotificationScreen(),
+        );
+      case addNewTripScreen:
+        return _buildRouteNavigationWithoutEffect(
+          settings,
+          const AddNewTripScreen(),
         );
       default:
         return _buildRouteNavigationWithoutEffect(

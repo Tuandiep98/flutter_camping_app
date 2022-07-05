@@ -76,7 +76,6 @@ class _SigninScreenState extends State<SigninScreen> {
             obscureText:
                 inputType == TextInputType.visiblePassword ? true : false,
             validator: (value) {
-              var a = 1;
               return true;
             },
           ),
@@ -101,7 +100,7 @@ class _SigninScreenState extends State<SigninScreen> {
           CustomButton(
             title: 'Login',
             onTap: () {
-              Get.offAllNamed(MyRouter.homeScreen);
+              Get.offAllNamed(MyRouter.myHomePage);
             },
           ),
           const SizedBox(height: 20),
